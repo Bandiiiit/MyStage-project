@@ -140,10 +140,15 @@ class Invoice extends CI_Controller {
     table.products th {
         background-color: #eaf3fb;
         color: #005baa;
-        text-align: center;
         padding: 8px;
         border: 1px solid #ccc;
         font-weight: bold;
+    }
+    table.products th:first-child {
+        text-align: left;
+    }
+    table.products th:not(:first-child) {
+        text-align: center;
     }
     table.products td {
         padding: 8px;

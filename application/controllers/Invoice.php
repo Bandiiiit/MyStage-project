@@ -138,25 +138,33 @@ class Invoice extends CI_Controller {
         font-size: 10pt;
     }
     table.products th {
-        background-color: #eaf3fb;
-        color: #005baa;
+        background-color: #d9edf7;
+        color: #0056b3;
         padding: 8px;
-        border: 1px solid #ccc;
+        border: 1px solid #a8d7ec;
         font-weight: bold;
+        text-align: center;
     }
     table.products th:first-child {
         text-align: left;
     }
-    table.products th:not(:first-child) {
-        text-align: center;
-    }
     table.products td {
         padding: 8px;
-        border: 1px solid #ccc;
+        border: 1px solid #a8d7ec;
         text-align: center;
+        background-color: #fff;
     }
     table.products td:first-child {
         text-align: left;
+    }
+    table.products .sous-total {
+        text-align: center;
+        font-weight: bold;
+        background-color: #f5f5f5;
+    }
+    table.products .sous-total-amount {
+        text-align: center;
+        font-weight: bold;
     }
     .text-right {
         text-align: right;
@@ -227,15 +235,15 @@ class Invoice extends CI_Controller {
     </thead>
     <tbody>
         <tr>
-            <td>COMMISSION SMARTBOOKING</td>
+            <td>COMMISSION<br>SMARTBOOKING</td>
             <td>1,00 Unité(e)</td>
             <td>'.number_format($commission_ht, 2).' DH</td>
             <td>10%</td>
             <td>'.number_format($commission_ht, 2).' DH</td>
         </tr>
         <tr>
-            <td colspan="4" class="text-right"><strong>Sous-total</strong></td>
-            <td>'.number_format($commission_ht, 2).' DH</td>
+            <td colspan="4" class="sous-total">Sous-total</td>
+            <td class="sous-total-amount">'.number_format($commission_ht, 2).' DH</td>
         </tr>
     </tbody>
 </table>

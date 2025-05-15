@@ -135,42 +135,45 @@ class Invoice extends CI_Controller {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
+        font-size: 10pt;
     }
     table.products th {
         background-color: #eaf3fb;
         color: #005baa;
-        text-align: left;
+        text-align: center;
         padding: 8px;
         border: 1px solid #ccc;
+        font-weight: bold;
     }
     table.products td {
         padding: 8px;
         border: 1px solid #ccc;
+        text-align: center;
+    }
+    table.products td:first-child {
+        text-align: left;
     }
     .text-right {
         text-align: right;
     }
-.total-section {
-    position: relative; /* To position it correctly within the parent container */
-    float: right; /* This will push it to the right side */
-    width: auto; /* Let the content adjust its width based on the content */
-    margin-top: 20px; /* Optional: adjust space from the top */
-}
-
-.total-line {
-    background-color: #f5faff;
-    padding: 10px;
-    border: 1px solid #005baa;
-    font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%; /* Use 100% width to fill the available space */
-}
-
-.clear {
-    clear: both;
-}
-
-}note {
+    .total-section {
+        position: relative;
+        float: right;
+        width: 250px;
+        margin-top: 20px;
+    }
+    .total-line {
+        background-color: #f5faff;
+        padding: 10px;
+        border: 1px solid #005baa;
+        font-weight: bold;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .clear {
+        clear: both;
+    }
+    .note {
         margin-top: 30px;
         font-size: 9pt;
         color: #444;
@@ -242,7 +245,7 @@ class Invoice extends CI_Controller {
 
 <div class="note">
     <div>Arrêté la facture à la somme de : <strong>'.ucfirst($this->convertNumberToText($solde_net)).'</strong></div>
-    <div style="margin-top: 10px;">Règlement par chèque ou virement à l’ordre de <strong>WEBMANIA</strong></div>
+    <div style="margin-top: 10px;">Règlement par chèque ou virement à l\'ordre de <strong>WEBMANIA</strong></div>
 </div>';
 
 
